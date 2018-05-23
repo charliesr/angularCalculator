@@ -1,0 +1,16 @@
+<form [formGroup]="calcForm">
+    <label> Numero 1:
+        <input formControlName="num1" />
+    </label>
+    <label> Numero 2:
+        <input formControlName="num2" />
+    </label>
+    <br />
+    <button (click)="sum()">Sumar</button>
+    <button (click)="res()">Restar</button>
+    <button (click)="mul()">Multiplicar</button>
+    <button (click)="div()">Dividir</button>
+    
+</form>
+
+<div> Resultado: {{ result }} </div>
