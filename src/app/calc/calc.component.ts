@@ -20,7 +20,7 @@ export class CalcComponent {
   );
 
   constructor() {
-    this.calc = new Calculadora();
+    this.calc = new Calculadora(0, 0);
   }
 
   sum(): void {
