@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Calculadora } from './Calculadora';
 import { ICalculadora } from './ICalculadora';
 
+
 @Component({
   selector: 'app-calc',
   templateUrl: './calc.component.html',
@@ -12,15 +13,16 @@ import { ICalculadora } from './ICalculadora';
 export class CalcComponent {
   result = 0;
   calc: ICalculadora;
-  calcForm = new FormGroup(
-    {
-      num1: new FormControl(),
-      num2: new FormControl()
-    }
-  );
+  calcForm: FormGroup;
 
   constructor() {
     this.calc = new Calculadora(0, 0);
+    this.calcForm = new FormGroup(
+      {
+        num1: new FormControl(),
+        num2: new FormControl()
+      }
+    );
   }
 
   sum(): void {
